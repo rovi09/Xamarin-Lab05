@@ -9,7 +9,7 @@ namespace MobileApp
 		{
 			InitializeComponent();
 
-			MainPage = new ContentPage { Content = new Label { Text = "Hello, World!", VerticalOptions = LayoutOptions.Center, HorizontalOptions = LayoutOptions.Center } };
+			MainPage = new MyLocationPage();
 		}
 
 		private Page UseTabs()
@@ -21,6 +21,10 @@ namespace MobileApp
 			tabs.Children.Add(new FontSample("Lobster") { Title = "Font sample" });
 
 			return tabs;
+		}
+        protected override void OnStart()
+        {
+			// aca se puede chequer permisos
 		}
 	}
 }
